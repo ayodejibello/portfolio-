@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  font-family: montserrat, lato, calibri;
+}
+body {
+  background-color: rgba(10, 10, 10, 0.863);
+  color: #f5f5f5;
+  padding: 2% 5%;
+}
+.heading2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.head-title {
+  font-family: sofia;
+  font-size: 18px;
+  font-weight: 500;
+  animation: name-spinner 10s 2s infinite;
+  text-decoration: underline;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .links img {
+  width: 25px;
+  margin: 0px 5px;
+  padding: 2px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.123);
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav .item-wrapper ul {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+nav .item-wrapper .item {
+  list-style: none;
+}
+
+/* main ........ */
+main {
+  margin-top: 150px;
+}
+main #about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+}
+main #about .intro .job {
+  font-size: 60px;
+  font-weight: 900;
+}
+main #about .about-img img {
+  width: 280px;
+  border-radius: 130px 180px 100px 220px;
+}
+/* about me styles */
+.about-text-wrapper {
+  margin-top: 20px;
+}
+.about-text-wrapper .divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+.about-text-wrapper .line {
+  width: 80%;
+  height: 2px;
+  background-color: white;
+}
+.about-text {
+  font-size: 14px;
+  line-height: 25px;
+  width: 80%;
+  margin: 10px auto;
+}
+main .exp {
+  margin: 30px 75px;
+}
+
+main .exp-items-wrap {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+main .exp-items-wrap img {
+  width: 60px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.863);
+}
+
+/* project cards */
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+  justify-content: center;
+  margin-top: 100px;
+}
+.projects .project-card {
+  display: flex;
+  column-gap: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: fit-content;
+  box-shadow: 1px 1px 10px black;
+  align-items: center;
+}
+.projects .project-card .site-descr {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 300px;
+}
+.projects .project-card .site-image img {
+  width: 400px;
+  box-shadow: 1px 1px 5px black;
+}
+.projects .project-card .card-links img {
+  width: 25px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* animations */
+@keyframes name-spinner {
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(-250deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
