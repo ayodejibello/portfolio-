@@ -1,0 +1,131 @@
+/* nav styles */
+.head-title {
+  font-family: sofia;
+  font-size: 18px;
+  font-weight: 500;
+  animation: name-spinner 10s 2s infinite;
+  text-decoration: underline;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav .links img {
+  width: 25px;
+  margin: 0px 5px;
+  padding: 2px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.123);
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav .item-wrapper ul {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+nav .item-wrapper .item {
+  list-style: none;
+}
+.hmb-icon {
+  display: none;
+}
+
+/* nav styles mobile */
+/* mobile styles 400px */
+@media (min-width: 300px) and (max-width: 480px) {
+  .head-title {
+    font-family: sofia;
+    font-size: 12px;
+    font-weight: 500;
+    animation: none;
+    text-decoration: underline;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    margin: 2%;
+  }
+  nav .links img {
+    display: none;
+    width: 20px;
+    margin: 0px 5px;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.123);
+  }
+  nav a {
+    text-decoration: none;
+    color: white;
+    display: none;
+  }
+  nav .item-wrapper ul {
+    display: none;
+    align-items: center;
+    column-gap: 50px;
+  }
+  nav .item-wrapper .item {
+    list-style: none;
+  }
+  /* hiding the nav items */
+  nav .links {
+    display: none;
+  }
+  nav .item-wrapper {
+    display: none;
+  }
+  .hmb-icon {
+    display: block;
+  }
+  /* mobile nav */
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px black;
+    background-color: black;
+    border: 2px solid;
+    width: fit-content;
+    padding: 20px 5px;
+    position: absolute;
+    right: 5px;
+  }
+  .mobile-nav.active {
+    display: flex;
+    animation: nav 0.5s;
+  }
+  .mobile-nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  .mobile-nav li {
+    margin: 30px auto;
+    list-style: none;
+  }
+  .mobile-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+  }
+  .mobile-nav img {
+    width: 20px;
+    margin: 10px;
+  }
+  @keyframes nav {
+    from {
+      transform: translate(300px);
+      scale: 0.5;
+      rotate: 80deg;
+    }
+    to {
+      transform: translate(0px);
+      scale: 1;
+    }
+  }
+}

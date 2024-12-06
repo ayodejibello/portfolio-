@@ -1,11 +1,20 @@
+@import url("./navStyles.css");
+@import url("./mobileBodyStyles.css");
 * {
   margin: 0;
   font-family: montserrat, lato, calibri;
 }
+nav,
+main,
+footer {
+  margin: 2%;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: rgba(10, 10, 10, 0.863);
   color: #f5f5f5;
-  padding: 2%;
 }
 .heading2 {
   font-size: 30px;
@@ -13,37 +22,6 @@ body {
 }
 p {
   font-size: 14px;
-}
-.head-title {
-  font-family: sofia;
-  font-size: 18px;
-  font-weight: 500;
-  animation: name-spinner 10s 2s infinite;
-  text-decoration: underline;
-}
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-nav .links img {
-  width: 25px;
-  margin: 0px 5px;
-  padding: 2px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.123);
-}
-nav a {
-  text-decoration: none;
-  color: white;
-}
-nav .item-wrapper ul {
-  display: flex;
-  align-items: center;
-  column-gap: 50px;
-}
-nav .item-wrapper .item {
-  list-style: none;
 }
 
 /* main ........ */
@@ -63,7 +41,9 @@ main #about .intro .job {
 main #about .about-img img {
   width: 280px;
   border-radius: 130px 180px 100px 220px;
+  border: 2px solid white;
 }
+
 /* about me styles */
 .about-text-wrapper {
   margin-top: 20px;
@@ -85,6 +65,7 @@ main #about .about-img img {
   width: 80%;
   margin: 10px auto;
 }
+
 /* experience ..... */
 main .exp {
   margin: 40px 60px;
@@ -114,11 +95,11 @@ main .exp-items-wrap img {
 .projects .project-card {
   display: flex;
   column-gap: 30px;
-  padding: 20px;
+  padding: 2%;
   border-radius: 20px;
   background-color: #f5f5f5;
   color: #000;
-  max-width: 800px;
+  max-width: 600px;
   box-shadow: 1px 1px 10px rgb(10, 10, 10);
   align-items: center;
 }
@@ -128,7 +109,7 @@ main .exp-items-wrap img {
   row-gap: 20px;
 }
 .projects .project-card .site-image img {
-  width: 500px;
+  width: 300px;
   padding: 5px;
   box-shadow: 1px 1px 5px black;
   border-radius: 15px;
@@ -161,6 +142,145 @@ footer .links img {
   padding: 2px;
   border-radius: 10px;
   box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.123);
+}
+@media (min-width: 300px) and (max-width: 480px) {
+  body {
+    background-color: rgba(10, 10, 10, 0.863);
+    color: #f5f5f5;
+  }
+  .heading2 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 10px;
+  }
+
+  /* main ........ */
+  main {
+    margin-top: 100px;
+  }
+  main #about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+  }
+  main #about .intro .job {
+    font-size: 25px;
+    font-weight: 800;
+  }
+  main #about .about-img img {
+    width: 150px;
+    border-radius: 80px 120px 40px 135px;
+  }
+
+  /* about me styles */
+  .about-text-wrapper {
+    margin-top: 20px;
+  }
+  .about-text-wrapper .divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+  }
+  .about-text-wrapper .line {
+    width: 80%;
+    height: 1px;
+    background-color: white;
+  }
+  .about-text {
+    font-size: 10px;
+    line-height: 20px;
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  /* experience ..... */
+  main .exp {
+    margin: 40px 60px;
+  }
+
+  main .exp-items-wrap {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 25px;
+  }
+  main .exp-items-wrap img {
+    width: 25px;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 2px 2px 15px rgba(128, 128, 128, 0.24);
+  }
+
+  /* project cards... */
+  .projects {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    justify-content: center;
+    margin: 100px 50px;
+  }
+  .projects .project-card {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+    padding: 5%;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    color: #000;
+    max-width: 300px;
+    box-shadow: 1px 1px 10px rgb(10, 10, 10);
+    align-items: center;
+    justify-items: center;
+  }
+  .projects .project-card .site-descr {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    font-size: 12px;
+  }
+  .projects .project-card .site-image img {
+    width: 90%;
+    padding: 10px 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.425);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.233);
+  }
+  .projects .project-card .card-links img {
+    width: 18px;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  /* footer */
+  footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0px 10px;
+  }
+  footer .links img {
+    width: 16px;
+    margin: 0px 5px;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.123);
+  }
 }
 
 /* animations */
