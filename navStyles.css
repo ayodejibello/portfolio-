@@ -39,7 +39,7 @@ nav .item-wrapper .item {
 
 /* nav styles mobile */
 /* mobile styles 400px */
-@media (min-width: 300px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .head-title {
     font-family: sofia;
     font-size: 12px;
@@ -91,30 +91,28 @@ nav .item-wrapper .item {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 1px 10px black;
-    background-color: black;
-    border: 2px solid;
+    box-shadow: 1px 1px 10px rgba(20, 20, 20, 0.384);
+    background-color: rgb(0, 0, 0);
+    border-radius: 3px;
     width: fit-content;
-    padding: 20px 5px;
+    padding: 15px;
+    row-gap: 20px;
     position: absolute;
-    right: 5px;
+    right: 30px;
   }
   .mobile-nav.active {
     display: flex;
     animation: nav 0.5s;
   }
-  .mobile-nav ul {
-    list-style: none;
-    text-align: center;
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
   }
-  .mobile-nav li {
-    margin: 30px auto;
-    list-style: none;
-  }
-  .mobile-nav a {
+  .mobile-nav-links a {
+    margin: 20px auto;
     text-decoration: none;
     color: white;
-    font-size: 14px;
+    font-weight: 500;
   }
   .mobile-nav img {
     width: 20px;
