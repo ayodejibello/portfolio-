@@ -33,6 +33,9 @@ nav .item-wrapper .item {
 .hmb-icon {
   display: none;
 }
+.mobile-nav {
+  display: none;
+}
 
 /* nav styles mobile */
 /* mobile styles 400px */
@@ -121,7 +124,6 @@ nav .item-wrapper .item {
     from {
       transform: translate(300px);
       scale: 0.5;
-      rotate: 80deg;
     }
     to {
       transform: translate(0px);
